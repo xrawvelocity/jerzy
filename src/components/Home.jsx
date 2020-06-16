@@ -8,9 +8,9 @@ export default class Home extends Component {
         <div className="navigation">
           <div className="navigation-logo">JayStone's World</div>
           <div className="navigation-links">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>Projects</div>
+            <div>About</div>
+            <div>Contact</div>
           </div>
         </div>
         <div className="home-content">

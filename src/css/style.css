@@ -78,18 +78,24 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     justify-content: space-around; }
+    @media only screen and (max-width: 560px) {
+      .home-content_cta {
+        height: 90vh;
+        font-size: 2.4rem; } }
     .home-content_cta-text {
       width: 70%;
       padding: 0 15%; }
       @media only screen and (max-width: 560px) {
         .home-content_cta-text {
-          width: 90%;
+          width: 100%;
           padding: 0 10%; } }
     .home-content_cta-btn {
       margin: 0rem 15% 10rem; }
       @media only screen and (max-width: 560px) {
         .home-content_cta-btn {
-          margin: 0rem 10% 15rem; } }
+          margin: 0rem 10% 15rem;
+          font-size: 4.5rem;
+          align-self: flex-end; } }
     .home-content_cta-img {
       position: absolute;
       height: 100vh;
@@ -99,7 +105,9 @@ body::-webkit-scrollbar-thumb {
       @media only screen and (max-width: 560px) {
         .home-content_cta-img {
           height: auto;
-          width: 100vw; } }
+          width: 100vw;
+          right: 0px;
+          transform: rotateZ(90deg) scale(1.333); } }
 
 .navigation {
   font-size: 3rem;
