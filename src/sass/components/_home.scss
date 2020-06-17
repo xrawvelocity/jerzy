@@ -1,0 +1,68 @@
+.home {
+  height: 100vh;
+  color: #ddd;
+
+  &-content {
+
+    &_cta {
+      position: relative;
+      font-size: 3rem;
+      padding-top: 10vh;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      &-text {
+        width: 70%;
+        padding: 0 15%;
+
+        @include respond (phone) {
+            width: 90%;
+            padding: 0 10%;
+        }
+      }
+      &-btn {
+        margin: 0rem 15% 10rem;
+
+        @include respond(phone) {
+            margin: 0rem 10% 15rem;
+        }
+      }
+      &-img {
+        position: absolute;
+        height: 100vh;
+        bottom: 0;
+        right: 0;
+        z-index: -100;
+
+        @include respond (phone) {
+            height: auto;
+            width: 100vw;
+        }
+      }
+    }
+  }
+}
+
+.navigation {
+  font-size: 3rem;
+  position: fixed;
+  padding: 4% 15%;
+
+  @include respond (phone) {
+      padding: 10%;
+  }
+
+  &-logo {
+    text-align: center;
+  }
+
+  &-links {
+      display: flex;
+
+      & > * {
+          margin-left: 3rem;
+      }
+  }
+}
