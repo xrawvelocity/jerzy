@@ -63,13 +63,13 @@ a:active {
 }
 
 ::-moz-selection {
-  background-color: $accent;
-  color: $white;
+  background-color: $white;
+  color: $black;
 }
 
 ::selection {
-  background-color: $accent;
-  color: $white;
+  background-color: $white;
+  color: $black;
 }
 
 body::-webkit-scrollbar-track {
@@ -88,5 +88,5 @@ body::-webkit-scrollbar-thumb {
   border-radius: 2px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: $accent;
+  background-color: $white;
 }

@@ -3,7 +3,6 @@
   color: #ddd;
 
   &-content {
-
     &_cta {
       position: relative;
       font-size: 3rem;
@@ -13,28 +12,40 @@
       flex-direction: column;
       justify-content: space-around;
 
-      @include respond (phone) {
-          height: 90vh;
-          font-size: 2.4rem;
-          
+      @include respond(phone) {
+        height: 90vh;
+        font-size: 2.4rem;
       }
 
       &-text {
         width: 70%;
         padding: 0 15%;
 
-        @include respond (phone) {
-            width: 100%;
-            padding: 0 10%;
+        @include respond(phone) {
+          width: 100%;
+          padding: 0 10%;
         }
       }
       &-btn {
         margin: 0rem 15% 10rem;
+      }
+
+      &-btn span {
+        font-size: 4rem;
+        width: 100%;
+        transition: all 0.3s ease-out;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 0.5rem 0rem #fff;
+        }
 
         @include respond(phone) {
-            margin: 0rem 10% 15rem;
-            font-size: 4.5rem;
-            align-self: flex-end;
+          margin: 0rem 10% 15rem;
+          font-size: 4.5rem;
+          align-self: flex-end;
         }
       }
       &-img {
@@ -44,35 +55,13 @@
         right: 0;
         z-index: -100;
 
-        @include respond (phone) {
-            height: auto;
-            width: 100vw;
-            right: 0px;
-            transform: rotateZ(90deg) scale(1.333);
+        @include respond(phone) {
+          height: auto;
+          width: 100vw;
+          right: 0px;
+          transform: rotateZ(90deg) scale(1.333);
         }
       }
     }
-  }
-}
-
-.navigation {
-  font-size: 3rem;
-  position: fixed;
-  padding: 4% 15%;
-
-  @include respond (phone) {
-      padding: 10%;
-  }
-
-  &-logo {
-    text-align: center;
-  }
-
-  &-links {
-      display: flex;
-
-      & > * {
-          margin-left: 3rem;
-      }
   }
 }

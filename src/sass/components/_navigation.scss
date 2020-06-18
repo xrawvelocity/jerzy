@@ -1,0 +1,48 @@
+.navigation {
+  font-size: 3rem;
+  position: fixed;
+  padding: 4% 15%;
+  color: #ddd;
+  
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 10000;
+
+  @include respond(phone) {
+    padding: 10%;
+  }
+
+  &-logo {
+      &,
+      &:link,
+      &:visited {
+          color: #ddd;
+          text-decoration: none;
+      }
+  }
+
+  &-links {
+    display: flex;
+
+    & > * {
+      margin-left: 3rem;
+      transition: all 0.3s ease-out;
+      box-shadow: 0 0rem 0rem transparent;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      
+      &,
+      &:link,
+      &:visited {
+        color: #ddd;
+        text-decoration: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0.5rem 0rem #fff;
+      }
+    }
+  }
+}
