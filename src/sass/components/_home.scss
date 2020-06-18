@@ -30,7 +30,14 @@
         margin: 0rem 15% 10rem;
       }
 
-      &-btn span {
+      &-btn a {
+        &,
+        &:link,
+        &:visited {
+          text-decoration: none;
+          color: #ddd;
+        }
+        box-shadow: 0 0rem 0rem transparent;
         font-size: 4rem;
         width: 100%;
         transition: all 0.3s ease-out;

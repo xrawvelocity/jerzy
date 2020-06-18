@@ -12,7 +12,7 @@ export default class App extends Component {
     return (
       <div className="main">
         <div className="navigation">
-          <Link to="/" className="navigation-logo">JayStone's World</Link>
+          <Link to="/" className="navigation-logo">Logo Here</Link>
           <div className="navigation-links">
             <Link to="/projects">Projects</Link>
             <Link to="/about">About</Link>

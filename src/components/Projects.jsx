@@ -17,8 +17,8 @@ class Projects extends Component {
         .join("");
       return (
         <Parallax
-          y={index % 2 ? [-100 + "px", 100 + "px"] : [100 + "px", -100 + "px"]}
-          x={index % 2 ? [-100 + "px", 100 + "px"] : [100 + "px", -100 + "px"]}
+          y={index % 2 ? [-120 + "px", 120 + "px"] : [120 + "px", -120 + "px"]}
+          x={index % 2 ? [-200 + "px", 200 + "px"] : [200 + "px", -200 + "px"]}
           tagInner="figure"
           className="projects-card"
         >

@@ -7,4 +7,6 @@
     padding-top: 20vh;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1s ease-out;
+    animation-fill-mode: backwards;
 }
