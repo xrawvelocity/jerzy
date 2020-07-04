@@ -1,38 +1,38 @@
 import React, { Component } from "react";
 import { Parallax, withController } from "react-scroll-parallax";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class Projects extends Component {
   state = {
     popup: "",
   };
-  randomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
 
   loadProjects = () => {
-    return [...Array(30)].map((each, index) => {
-      console.log(this.randomNumber(50, 70));
-      let random = [...Array(30)]
+    return [...Array(9)].map((each, index) => {
+      let random = [...Array(9)]
         .map((i) => (~~(Math.random() * 36)).toString(36))
         .join("");
       return (
         <Parallax
-          y={index % 2 ? [-120 + "px", 120 + "px"] : [120 + "px", -120 + "px"]}
-          x={index % 2 ? [-200 + "px", 200 + "px"] : [200 + "px", -200 + "px"]}
+          y={index % 2 ? [-100 + "px", 100 + "px"] : [100 + "px", -100 + "px"]}
+          x={index % 2 ? [-150 + "px", 150 + "px"] : [150 + "px", -150 + "px"]}
           tagInner="figure"
           className="projects-card"
         >
           <img
+            loading="lazy"
             onClick={() => {
               this.setState({
-                popup: `https://picsum.photos/seed/${random}/500/400`,
+                popup: `https://picsum.photos/seed/${random}/1980/1080`,
               });
             }}
             onLoad={() => this.props.parallaxController.update()}
             className="projects-card-img"
-            src={`https://picsum.photos/seed/${random}/500/400`}
+            src={`https://picsum.photos/seed/${random}/1980/1080`}
             alt="random"
           />
+          <div className="projects-card-img_bg"></div>
         </Parallax>
       );
     });
@@ -42,7 +42,22 @@ class Projects extends Component {
     return (
       <div className="projects">
         {this.loadProjects()}
-        {this.state.popup && <div>yo</div>}
+        {this.state.popup !== "" && (
+          <div className="projects-popup">
+            <img
+              src={this.state.popup}
+              alt="project"
+              className="projects-popup_image"
+            />
+            <FontAwesomeIcon
+              onClick={() => {
+                this.setState({ popup: "" });
+              }}
+              icon={faTimes}
+              className="projects-popup_close"
+            />
+          </div>
+        )}
       </div>
     );
   }

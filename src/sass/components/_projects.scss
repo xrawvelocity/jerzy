@@ -1,12 +1,109 @@
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 500px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 500px);
+  padding-bottom: 15rem;
+  width: 100%;
+  row-gap: 300px;
+  column-gap: 100px;
+  padding-top: 20vh;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-out 0.5s;
+  animation-fill-mode: backwards;
+
+  &-card {
+    height: 100%;
     width: 100%;
-    row-gap: 100px;
-    column-gap: 100px;
-    padding-top: 20vh;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 1s ease-out;
-    animation-fill-mode: backwards;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    &-img {
+      transform: scale(1);
+      transition: all 0.3s ease-out;
+      z-index: 1;
+      height: 400px;
+      width: 500px;
+      object-fit: cover;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        z-index: 1000;
+      }
+
+      &_bg {
+        background-color: #fff;
+        width: 500px;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        z-index: -1000;
+      }
+    }
+  }
+
+  &-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000000;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+
+    &_image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 80vh;
+      width: auto;
+      object-fit: cover;
+      animation: fadeIn 0.5s ease-out;
+      animation-fill-mode: both;
+    }
+
+    &_btn {
+      border: 2px solid #d22;
+      border-radius: 3px;
+      background-color: rgba(#d22, 0.1);
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: auto;
+      width: auto;
+      font-size: 3rem;
+      color: #ddd;
+      padding: 1rem 1.5rem;
+      transition: all 0.1s ease-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(#d22, 0.4);
+      }
+    }
+
+    &_close {
+      position: absolute;
+      top: 50px;
+      right: 100px;
+      color: #d22;
+      font-size: 4rem;
+      transition: all 0.2s ease;
+
+      @include respond(phone) {
+        top: 30px;
+        right: 30px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: #a00;
+      }
+    }
+  }
 }

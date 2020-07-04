@@ -19,7 +19,11 @@
     "react-parallax": "^3.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-scroll-parallax": "^2.3.3"
+    "react-scroll-parallax": "^2.3.3",
+    "sqip": "^1.0.0-alpha.31",
+    "sqip-plugin-data-uri": "^1.0.0-alpha.32",
+    "sqip-plugin-primitive": "^1.0.0-alpha.33",
+    "sqip-plugin-svgo": "^1.0.0-alpha.32"
   },
   "scripts": {
     "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",

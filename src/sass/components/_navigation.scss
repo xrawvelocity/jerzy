@@ -1,7 +1,7 @@
 .navigation {
   font-size: 3rem;
   position: fixed;
-  padding: 4% 15%;
+  padding: 4% 10%;
   color: #ddd;
   
   display: flex;
@@ -19,6 +19,11 @@
       &:visited {
           color: #ddd;
           text-decoration: none;
+          transition: all .2s ease-out;
+      }
+
+      &:hover {
+        color: #bcbcbc;
       }
   }
 

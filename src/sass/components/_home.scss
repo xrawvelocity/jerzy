@@ -20,14 +20,39 @@
       &-text {
         width: 70%;
         padding: 0 15%;
+        text-transform: uppercase;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 20rem;
+        font-weight: 900;
+        letter-spacing: -1.5rem;
+        display: flex;
+        flex-direction: column;
+        z-index: -1000;
 
         @include respond(phone) {
           width: 100%;
           padding: 0 10%;
         }
+
+        &_top {
+          color: #192841;
+
+          margin-left: 10%;
+        }
+        &_middle {
+          color: white;
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: white;
+        }
+        &_bottom {
+          margin: 10rem 0 10rem 30rem;
+          font-size: 2vw;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        }
       }
       &-btn {
-        margin: 0rem 15% 10rem;
+        margin: 0rem 20% 10rem;
       }
 
       &-btn a {
@@ -60,7 +85,7 @@
         height: 100vh;
         bottom: 0;
         right: 0;
-        z-index: -100;
+        z-index: 100;
 
         @include respond(phone) {
           height: auto;
