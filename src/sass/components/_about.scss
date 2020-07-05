@@ -1,0 +1,12 @@
+.about {
+    font-size: 9rem;
+    background-image: url("https://picsum.photos/seed/22333123/1980/1080");
+    height: 100vh;
+
+    &-text {
+        mix-blend-mode: difference;
+        z-index: 10000;
+        color:#ddd;
+        padding-top: 5rem;
+    }
+}

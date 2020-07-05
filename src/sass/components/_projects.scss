@@ -8,13 +8,16 @@
   padding-top: 20vh;
   justify-content: center;
   align-items: center;
+  background-color: #ddd;
   animation: fadeIn 1s ease-out 0.5s;
   animation-fill-mode: backwards;
+  z-index: 1;
 
   &-card {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    background-color: rgba(0,0,0,0.2);
     position: relative;
 
     &-img {

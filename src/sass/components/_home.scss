@@ -24,7 +24,8 @@
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 20rem;
         font-weight: 900;
-        letter-spacing: -1.5rem;
+        letter-spacing: -3.5
+        rem;
         display: flex;
         flex-direction: column;
         z-index: -1000;
@@ -35,9 +36,9 @@
         }
 
         &_top {
-          color: #192841;
-
-          margin-left: 10%;
+          color: #213f74;
+          letter-spacing: 5rem;
+          align-self: center;          
         }
         &_middle {
           color: white;
